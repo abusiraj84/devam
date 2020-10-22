@@ -53,4 +53,5 @@ const Title = styled.h1`
 const Description = styled.p`
   font-size: 17px;
   line-height: 130%;
+  margin-bottom: 50px;
 `
