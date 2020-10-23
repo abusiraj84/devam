@@ -1,9 +1,9 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
 import NavSection from "./NavSection"
 import bg from "../../../static/images/waves/hero-wave1.svg"
-import Cards from "./Cards"
+import CardsTest from "./CardsTest"
+import Card from "./Card"
 
 function HeroSection() {
   return (
@@ -17,7 +17,8 @@ function HeroSection() {
             React and Swift. Complete courses about the best tools.
           </Description>
         </TextWrapper>
-        <Cards />
+        {/* <CardsTest /> */}
+        <Card />
       </ContentWrapper>
     </Wrapper>
   )
