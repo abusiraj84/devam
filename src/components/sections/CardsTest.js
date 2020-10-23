@@ -1,9 +1,8 @@
 import React, { useState } from "react"
-import styled from "styled-components"
 import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion"
 import "./styles.css"
 
-function Cards() {
+function CardsTest() {
   return (
     <AnimateSharedLayout>
       <motion.ul layout initial={{ borderRadius: 25 }}>
@@ -15,7 +14,7 @@ function Cards() {
   )
 }
 
-export default Cards
+export default CardsTest
 function Item() {
   const [isOpen, setIsOpen] = useState(false)
 
