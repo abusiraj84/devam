@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { motion } from "framer-motion"
 import logo from "../../../static/images/logos/logo.svg"
 import { Caption } from "../styles/TextStyles"
+import { themes } from "../styles/ColorStyles"
 
 function NavSection() {
   const [isOpen, setIsOpen] = useState(false)
@@ -111,7 +112,7 @@ const MenuMobile = styled(motion.img)`
 `
 
 const Title = styled(Caption)`
-  color: white;
+  color: ${themes.dark.text1};
 `
 
 const TitleMenu = styled(Caption)`
