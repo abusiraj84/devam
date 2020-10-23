@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { motion } from "framer-motion"
 import logo from "../../../static/images/logos/logo.svg"
+import { Caption } from "../styles/TextStyles"
 
 function NavSection() {
   const [isOpen, setIsOpen] = useState(false)
@@ -109,17 +110,13 @@ const MenuMobile = styled(motion.img)`
   }
 `
 
-const Title = styled.h3`
-  font-weight: bold;
-  font-size: 15px;
+const Title = styled(Caption)`
   color: white;
 `
 
-const TitleMenu = styled.h3`
+const TitleMenu = styled(Caption)`
   cursor: pointer;
 
-  font-weight: bold;
-  font-size: 15px;
   color: #fff;
 `
 
