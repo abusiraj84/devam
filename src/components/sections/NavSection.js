@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
 import { motion } from "framer-motion"
 import logo from "../../../static/images/logos/logo.svg"
@@ -17,22 +16,23 @@ function NavSection() {
         <Logo src={logo} />
         <MenuWrapper>
           <MenuIcon>
-            <img src="images/icons/courses.svg" />
+            <img src="images/icons/courses.svg" alt="" />
             <Title>Courses</Title>
           </MenuIcon>
           <MenuIcon>
-            <img src="images/icons/discounts.svg" />
+            <img src="images/icons/discounts.svg" alt="" />
             <Title>Shop</Title>
           </MenuIcon>
           <MenuIcon>
-            <img src="images/icons/credit.svg" />
+            <img src="images/icons/credit.svg" alt="" />
             <Title>Pricing</Title>
           </MenuIcon>
 
-          <img src="images/icons/settings.svg" />
+          <img src="images/icons/settings.svg" alt="" />
         </MenuWrapper>
         <MenuMobile
           src="images/icons/menu.svg"
+          alt=""
           onClick={() => setIsOpen(!isOpen)}
           whileHover={{
             scale: 1.1,
@@ -46,15 +46,15 @@ function NavSection() {
           transition={{ type: "spring" }}
         >
           <MenuGrid>
-            <img src="images/icons/courses.svg" />
+            <img src="images/icons/courses.svg" alt="" />
             <TitleMenu>Courses</TitleMenu>
           </MenuGrid>
           <MenuGrid>
-            <img src="images/icons/discounts.svg" />
+            <img src="images/icons/discounts.svg" alt="" />
             <TitleMenu>Shop</TitleMenu>
           </MenuGrid>
           <MenuGrid>
-            <img src="images/icons/credit.svg" />
+            <img src="images/icons/credit.svg" alt="" />
             <TitleMenu>Pricing</TitleMenu>
           </MenuGrid>
         </DropDownMenu>
