@@ -1,43 +1,48 @@
 import React from "react"
 import styled from "styled-components"
 import { Caption2, SmallText } from "../styles/TextStyles"
+import { Link } from "gatsby"
 
 export default function PurchaseButton(props) {
   const { title, subtitle } = props
 
   return (
-    <Wrapper>
-      <IconWrapper>
-        <Icon src="/images/icons/credit.svg" />
-        <Ring src="/images/icons/icon-ring.svg" />
-      </IconWrapper>
-      <TextWrapper>
-        <Title>{title || "Get Pro Access"}</Title>
+    <Link to="/page-2">
+      <Wrapper>
+        <IconWrapper>
+          <Icon src="/images/icons/credit.svg" />
+          <Ring src="/images/icons/icon-ring.svg" />
+        </IconWrapper>
+        <TextWrapper>
+          <Title>{title || "Get Pro Access"}</Title>
 
-        <Subtitle>{subtitle || "$19 per month"}</Subtitle>
-      </TextWrapper>
-    </Wrapper>
+          <Subtitle>{subtitle || "$19 per month"}</Subtitle>
+        </TextWrapper>
+      </Wrapper>
+    </Link>
   )
 }
 
 const Wrapper = styled.div`
-  max-width: 280px;
-  height: 77px;
-  padding: 12px;
-  background: linear-gradient(180deg, #ffffff 0%, #d9dfff 100%);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
-    0px 20px 40px rgba(23, 0, 102, 0.2),
-    inset 0px 0px 0px 0.5px rgba(255, 255, 255, 0.5);
+  background: linear-gradient(rgb(255, 255, 255) 0%, rgb(217, 223, 255) 100%);
+  border: none;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 0.5px inset,
+    rgba(23, 0, 102, 0.2) 0px 20px 40px, rgba(0, 0, 0, 0.1) 0px 1px 3px;
+  backdrop-filter: blur(30px);
   border-radius: 20px;
-  border: 0px;
+  cursor: pointer;
+  position: relative;
+  width: 280px;
+  height: 77px;
+  padding: 0px;
 
+  height: 77px;
   display: grid;
+  grid-template-columns: 55px auto;
+  padding: 12px;
+  justify-items: start;
   gap: 20px;
-  grid-template-columns: 53px auto;
-  justify-content: start;
   align-items: center;
-
-  margin-bottom: 20px;
 `
 
 const Title = styled(Caption2)``

@@ -10,7 +10,7 @@ function NavSection() {
 
   const variants = {
     open: { opacity: 1, x: 0, y: 0 },
-    closed: { opacity: 0, y: "-30px" },
+    closed: { opacity: 0, y: "-400px" },
   }
   return (
     <Wrapper>
