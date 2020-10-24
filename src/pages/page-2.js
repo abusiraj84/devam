@@ -4,6 +4,7 @@ import NavSection from "../components/sections/NavSection"
 import styled from "styled-components"
 import WaveBackground from "../components/backgrounds/WaveBackground"
 import Layout from "../components/layout/layout"
+import SectionDetail from "../components/sections/section/SectionDetail"
 
 function SecondPage() {
   return (
@@ -13,6 +14,15 @@ function SecondPage() {
         <SEO title="Page two" />
         <ContentWrapper>
           <NavSection />
+          <SectionDetail
+            logo=""
+            title=""
+            sections=""
+            hours="5"
+            desc=""
+            name=""
+            instaimg=""
+          />
         </ContentWrapper>
 
         {/* <Link to="/">Go back to the homepage</Link> */}
@@ -30,10 +40,9 @@ const ContentWrapper = styled.div`
   background-repeat: no-repeat; */
   overflow: hidden;
   max-width: 1234px;
-  padding: 150px 30px;
   margin: 0 auto;
 
   @media (max-width: 640px) {
-    padding: 10px 30px;
+    padding: 0px 0px;
   }
 `

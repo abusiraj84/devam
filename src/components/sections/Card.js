@@ -17,6 +17,7 @@ function Card() {
 
 export default Card
 const Box = styled.div`
+  margin-top: 50px;
   border-radius: 20px;
   background: linear-gradient(
     209.21deg,

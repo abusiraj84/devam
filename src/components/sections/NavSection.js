@@ -88,6 +88,7 @@ const MenuWrapper = styled.div`
   justify-items: center;
   align-content: center;
   align-items: center;
+
   @media (max-width: 640px) {
     display: none;
   }
@@ -123,6 +124,7 @@ const TitleMenu = styled(Caption)`
 `
 
 const DropDownMenu = styled(motion.div)`
+  z-index: 999;
   transition: width 2s;
 
   /* display: ${props => (props.visibility ? "block" : "none")}; */

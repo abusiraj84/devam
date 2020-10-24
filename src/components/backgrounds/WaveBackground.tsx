@@ -4,11 +4,7 @@ import styled from "styled-components"
 export default function WaveBackground() {
   return (
     <Wrapper>
-      <Wave
-        src="/images/waves/hero-wave1.svg"
-        style={{ top: "100px", filter: `blur(60px)` }}
-      />
-      <Wave src="/images/waves/hero-wave2.svg" style={{ top: "350px" }} />
+      <Wave src="/images/waves/hero-wave2.svg" style={{ top: "250px" }} />
       <Wave src="/images/waves/hero-wave3.svg" style={{ top: "550px" }} />
     </Wrapper>
   )

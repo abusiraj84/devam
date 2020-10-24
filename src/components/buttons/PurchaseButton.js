@@ -24,6 +24,7 @@ export default function PurchaseButton(props) {
 }
 
 const Wrapper = styled.div`
+  margin: 20px;
   background: linear-gradient(rgb(255, 255, 255) 0%, rgb(217, 223, 255) 100%);
   border: none;
   box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 0.5px inset,
@@ -33,9 +34,6 @@ const Wrapper = styled.div`
   cursor: pointer;
   position: relative;
   width: 280px;
-  height: 77px;
-  padding: 0px;
-
   height: 77px;
   display: grid;
   grid-template-columns: 55px auto;
