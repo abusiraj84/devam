@@ -120,6 +120,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(180deg, #16acdb 0%, #023446 100%);
+  background-repeat: no-repeat;
 }
 ol,
 ul {

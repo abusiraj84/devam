@@ -43,6 +43,7 @@ function NavSection() {
           whileTap={{ scale: 0.9 }}
         />
         <DropDownMenu
+          initial={{ opacity: 0 }}
           animate={isOpen ? "open" : "closed"}
           variants={variants}
           transition={{ type: "spring" }}
