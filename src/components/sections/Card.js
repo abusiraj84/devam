@@ -1,16 +1,19 @@
 import React from "react"
 import styled from "styled-components"
 
-function Card() {
+function Card(props) {
+  const { title, img } = props
   return (
     <Box>
       <BoxImg
-        src="//images.ctfassets.net/ooa29xqb8tix/7sZsITPVNFJcG5Fmu0AyBi/442a2ee3d4dc94a9795ae2ec5222f039/React_Hooks_Illustration_Cover.svg"
+        src={
+          img ||
+          "//images.ctfassets.net/ooa29xqb8tix/7sZsITPVNFJcG5Fmu0AyBi/442a2ee3d4dc94a9795ae2ec5222f039/React_Hooks_Illustration_Cover.svg"
+        }
         alt="Build a web app with React Hooks icon"
-        class="CourseCard__Illustration-za4owo-6 gwcuM illustration"
       />
 
-      <Title>Build a web aTitlep with React Hooks</Title>
+      <Title>{title || "Build a web aTitlep with React Hooks"}</Title>
     </Box>
   )
 }
@@ -39,7 +42,6 @@ const Box = styled.div`
   place-content: center;
   justify-items: center;
   align-items: center;
-  margin-bottom: 80px;
   &:hover {
     box-shadow: rgba(78, 153, 227, 0.3) 0px 20px 80px,
       rgba(0, 0, 0, 0.15) 0px 20px 40px;

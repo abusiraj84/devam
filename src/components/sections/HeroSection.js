@@ -4,9 +4,9 @@ import NavSection from "./NavSection"
 import PurchaseButton from "../buttons/PurchaseButton"
 // import bg from "../../../static/images/waves/hero-wave1.svg"
 // import CardsTest from "./CardsTest"
-import Card from "./Card"
 import { H1, MediumText } from "../styles/TextStyles"
 import WaveBackground from "../backgrounds/WaveBackground"
+import CoursesCards from "./section/CoursesCards"
 
 function HeroSection() {
   return (
@@ -27,7 +27,8 @@ function HeroSection() {
           />
         </TextWrapper>
         {/* <CardsTest /> */}
-        <Card />
+
+        <CoursesCards />
       </ContentWrapper>
     </Wrapper>
   )
