@@ -5,13 +5,16 @@ import { Caption, H1, MediumText } from "../../styles/TextStyles"
 
 function SectionDetail(props) {
   const { logo, title, sections, hours, desc, name, instaimg } = props
+  const { foo } = props.location.state
+
+  console.log(foo)
   return (
     <Wrapper>
       <BoxImgWrapper>
         <BoxImg src="images/ills/example1.svg" />
       </BoxImgWrapper>
       <Logo src={logo || "images/icons/cubase.svg"} />
-      <Title>{title || "Learn Epic Music"}</Title>
+      <Title>{title}</Title>
       <Desc1>
         {sections || "0"} SECTIONS - {hours || "2"} HOURS OF VIDEO
       </Desc1>

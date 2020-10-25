@@ -16,7 +16,7 @@ function SecondPage() {
           <NavSection />
           <SectionDetail
             logo=""
-            title=""
+            title="ss"
             sections=""
             hours="5"
             desc=""

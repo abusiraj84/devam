@@ -1,20 +1,24 @@
+import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
 
 function Card(props) {
   const { title, img } = props
-  return (
-    <Box>
-      <BoxImg
-        src={
-          img ||
-          "//images.ctfassets.net/ooa29xqb8tix/7sZsITPVNFJcG5Fmu0AyBi/442a2ee3d4dc94a9795ae2ec5222f039/React_Hooks_Illustration_Cover.svg"
-        }
-        alt="Build a web app with React Hooks icon"
-      />
 
-      <Title>{title || "Build a web aTitlep with React Hooks"}</Title>
-    </Box>
+  return (
+    <Link to={{ pathname: "/page-2", state: { foo: "bar" } }}>
+      <Box>
+        <BoxImg
+          src={
+            img ||
+            "//images.ctfassets.net/ooa29xqb8tix/7sZsITPVNFJcG5Fmu0AyBi/442a2ee3d4dc94a9795ae2ec5222f039/React_Hooks_Illustration_Cover.svg"
+          }
+          alt="Build a web app with React Hooks icon"
+        />
+
+        <Title>{title || "Build a web aTitlep with React Hooks"}</Title>
+      </Box>
+    </Link>
   )
 }
 
@@ -54,6 +58,7 @@ const Box = styled.div`
 `
 
 const BoxImg = styled.img`
+  width: 150px;
   height: 150px;
   margin: 0px;
   opacity: 1;
