@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import PurchaseButton from "../../buttons/PurchaseButton"
-import { Caption, H2, MediumText } from "../../styles/TextStyles"
+import { Caption, H1, MediumText } from "../../styles/TextStyles"
 
 function SectionDetail(props) {
   const { logo, title, sections, hours, desc, name, instaimg } = props
@@ -43,29 +43,30 @@ const Wrapper = styled.div`
   justify-items: center;
   padding: 50px 0px 0px;
   gap: 40px;
+  margin: 0px 20px;
 `
 
 const BoxImgWrapper = styled.div`
   width: 360px;
   height: 280px;
-  border-radius: 20px;
-  background: linear-gradient(200.42deg, #844ffc 13.57%, #491eb8 98.35%);
+
+  background:linear-gradient(209.21deg, #9F7FE5 13.57%, #4E99E3 98.38%);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 20px,
     rgba(255, 255, 255, 0.25) 0px 0px 0px 0.5px inset;
   box-sizing: border-box;
   border-radius: 20px;
-  margin-bottom: 40px;
-  filter: hue-rotate(-10deg);
   display: grid;
   -webkit-box-pack: center;
   place-content: center;
   grid-template-columns: auto;
   justify-items: center;
   transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
-
+margin-top:25px;
   &:hover {
     transform: scale(1.1);
-    background: linear-gradient(200.42deg, #ff8570 13.57%, #bb302a 98.35%);
+    filter: hue-rotate(-30deg);
+
+    }
   }
   &:hover img {
     transform: scale(0.8);
@@ -81,7 +82,7 @@ const Logo = styled.img`
   height: 60px;
 `
 
-const Title = styled(H2)`
+const Title = styled(H1)`
   color: rgb(255, 255, 255);
   text-align: center;
   text-shadow: rgba(0, 0, 0, 0.3) 0px 20px 40px;
