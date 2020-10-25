@@ -28,19 +28,26 @@ const Box = styled.div`
     rgba(0, 0, 0, 0.05) 0px 1px 3px;
   position: relative;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: auto;
   grid-template-rows: 1fr 1fr;
   width: 200px;
   height: 330px;
   transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
   padding: 20px;
   transform: scale(1);
-
+  -webkit-box-pack: center;
+  place-content: center;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 80px;
   &:hover {
     box-shadow: rgba(78, 153, 227, 0.3) 0px 20px 80px,
       rgba(0, 0, 0, 0.15) 0px 20px 40px;
     cursor: pointer;
     transform: scale(1.1);
+  }
+  &:hover img {
+    transform: scale(0.8);
   }
 `
 
@@ -50,9 +57,6 @@ const BoxImg = styled.img`
   opacity: 1;
   animation: 1s ease 0s 1 normal forwards running jBcSpD;
   transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
-  &:hover {
-    transform: scale(0.9);
-  }
 `
 
 const Title = styled.p`
