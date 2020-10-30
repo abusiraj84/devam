@@ -31,7 +31,7 @@ export const themes = {
   dark: {
     text1: `white`,
     text2: `rgba(255,255,255,0.7)`,
-    backgroundColor: `#066277`,
+    backgroundColor: `rgb(31, 31, 71)`,
     card: {
       backgroundColor: `rgba(25, 24, 63, 0.98)`,
       boxShadow: `0px 30px 60px rgba(0, 0, 0, 0.25),

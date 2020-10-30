@@ -1,22 +1,35 @@
 import React from "react"
 import styled from "styled-components"
 import PurchaseButton from "../../buttons/PurchaseButton"
-import { Caption, H1, MediumText } from "../../styles/TextStyles"
+import {
+  Caption,
+  Caption2,
+  H1,
+  MediumText,
+  SmallText,
+} from "../../styles/TextStyles"
 
 function SectionDetail(props) {
-  const { logo, title, sections, hours, desc, name, instaimg } = props
-  const { foo } = props.location.state
-
-  console.log(foo)
+  const {
+    logo,
+    title,
+    img,
+    sections,
+    hours,
+    desc,
+    name,
+    instaimg,
+    topics,
+  } = props
   return (
     <Wrapper>
       <BoxImgWrapper>
-        <BoxImg src="images/ills/example1.svg" />
+        <BoxImg src={img || "images/ills/example1.svg"} />
       </BoxImgWrapper>
       <Logo src={logo || "images/icons/cubase.svg"} />
       <Title>{title}</Title>
       <Desc1>
-        {sections || "0"} SECTIONS - {hours || "2"} HOURS OF VIDEO
+        {sections || "0"} أقسام - {hours || "2"} ساعات من الفيديو
       </Desc1>
       <Desc2>
         {desc ||
@@ -29,9 +42,17 @@ function SectionDetail(props) {
             "https://scontent.fsaw1-6.fna.fbcdn.net/v/t1.0-9/109947688_2536568519897212_8481853244792259908_n.jpg?_nc_cat=109&ccb=2&_nc_sid=09cbfe&_nc_ohc=8Hl_KYSqMNoAX8Xy2Mp&_nc_ht=scontent.fsaw1-6.fna&oh=d51e6ee9c25002df4182a8f11c8da66c&oe=5FB8804F"
           }
         />
-        <InstracturName>TAUGHT BY {name || "Husam Nasrullah"}</InstracturName>
+        <InstracturName>مدرب الدورة {name || "Husam Nasrullah"}</InstracturName>
       </InstracturWrapper>{" "}
       <PurchaseButton />
+      <Line />
+      <TopicWrapper>
+        <TopicTitle>{topics || "20"} درس</TopicTitle>
+        <TopicDesc>
+          جميع الخطوات مشروحة للمبتدئين بطريقة مبسطة وسهلة لذلك ستجد كل شيء في
+          متناول يديك ولن يتصعّب علي شيء.
+        </TopicDesc>
+      </TopicWrapper>
     </Wrapper>
   )
 }
@@ -113,3 +134,27 @@ const InstracturImg = styled.img`
 `
 
 const InstracturName = styled(Caption)``
+
+const Line = styled.div`
+width: 280px;
+    height: 0.5px;
+    margin: 0px auto;
+    background: rgba(255, 255, 255, 0.3);
+}`
+const TopicWrapper = styled.div`
+  padding: 0px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
+
+const TopicTitle = styled(Caption2)`
+  color: rgba(255, 255, 255, 0.7);
+`
+const TopicDesc = styled(SmallText)`
+  color: rgba(255, 255, 255, 0.7);
+  margin: 12px auto 0px;
+  text-align: center;
+`

@@ -26,7 +26,6 @@ function HeroSection() {
             subtitle="120+ hours of video"
           />
         </TextWrapper>
-        {/* <CardsTest /> */}
 
         <CoursesCards />
       </ContentWrapper>
@@ -44,7 +43,7 @@ const ContentWrapper = styled.div`
   background-repeat: no-repeat; */
   overflow: hidden;
   max-width: 1234px;
-  padding: 150px 30px;
+  padding: 20px 30px;
   margin: 0 auto;
   @media (max-width: 640px) {
     padding: 10px 30px;
