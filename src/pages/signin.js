@@ -6,7 +6,7 @@ import SEO from "../components/layout/seo"
 import NavSection from "../components/sections/NavSection"
 import firebase from "gatsby-plugin-firebase"
 import { AuthContext } from "../context/auth"
-import { navigate } from "gatsby"
+import { Link, navigate } from "gatsby"
 
 const SignIn = () => {
   const [data, setData] = useState({
@@ -17,6 +17,7 @@ const SignIn = () => {
   })
 
   const { setUser } = useContext(AuthContext)
+  const [error, setError] = useState("")
 
   const handleChange = e => {
     setData({ ...data, [e.target.name]: e.target.value })
@@ -35,6 +36,7 @@ const SignIn = () => {
 
       .catch(err => {
         setData({ ...data, error: err.message })
+        setError(error.message)
       })
   }
   return (
@@ -64,9 +66,38 @@ const SignIn = () => {
           {data.error ? <p style={{ color: "red" }}>{data.error}</p> : null}
           <input type="submit" value="Login" />
         </form> */}
-        <Form>
+        <Container>
+          {error && <Error data-testid="error">{error}</Error>}
+
           <Title>تسجيل الدخول</Title>
-        </Form>
+          <Base onSubmit={handleSubmit} method="POST">
+            <Input
+              placeholder="البريد الإلكتروني"
+              type="email"
+              name="email"
+              value={data.email}
+              onChange={handleChange}
+            />
+            <Input
+              autoComplete="off"
+              placeholder="كلمة المرور"
+              type="password"
+              name="password"
+              value={data.password}
+              onChange={handleChange}
+            />
+            <Submit type="submit" value="Login">
+              تسجيل الدخول
+            </Submit>
+          </Base>
+          <Text>
+            لست مسجلًا؟ <Link to="/signup">سجل عضويتك الآن</Link>
+          </Text>
+          <TextSmall>
+            لن نقوم بنشر معلوماتك الخاصة فجميع الحقوق محفوظة لدى مجموعة دوام
+            أونلاين.
+          </TextSmall>
+        </Container>
       </Layout>
     </>
   )
@@ -147,14 +178,14 @@ export const Input = styled.input`
 `
 
 export const Submit = styled.button`
-  background: #e50914;
+  background: #00cffd;
   border-radius: 4px;
   font-size: 16px;
   font-weight: bold;
   margin: 24px 0 12px;
   padding: 16px;
   border: 0;
-  color: white;
+  color: #080812;
   cursor: pointer;
   &:disabled {
     opacity: 0.5;
